@@ -14,4 +14,4 @@ for name in names:
     Path(path).mkdir(parents=True, exist_ok=True)
     for ext in ['cpg', 'dbf', 'prj', 'shp', 'shx']:
         os.system(f'cp empty.{ext} {path}/{name[1]}.{ext}')
-    os.system(f'zip -r{"" if name[0] else " -j"} {name[1]}.zip {path}')
+    os.system(f'zip -r{"" if name[0] else " -j"} {path}.zip {path}')
